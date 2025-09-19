@@ -37,8 +37,9 @@ async function sendMessage() {
 
         const data = await res.json();
         chatBox.innerHTML += `<p><strong>Gemini:</strong> ${data.reply}</p>`;
+        chatBox.scrollTop = chatBox.scrollHeight;
     } catch (err) {
         chatBox.innerHTML += `<p><strong>Error:</strong> Unable to reach server.</p>`;
+        chatBox.scrollTop = chatBox.scrollHeight;
     }
-    chatBox.scrollTop = chatBox.scrollHeight;
 }
