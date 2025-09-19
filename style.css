@@ -1,0 +1,160 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #4A90E2;
+    --background-color: #F7F8FC;
+    --sidebar-bg: #FFFFFF;
+    --card-bg: #FFFFFF;
+    --text-primary: #333333;
+    --text-secondary: #777777;
+    --border-color: #EAEBF0;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+    --font-family: 'Inter', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-family); background-color: var(--background-color); color: var(--text-primary); }
+a { text-decoration: none; color: inherit; }
+ul { list-style-type: none; }
+
+/* --- Login Page Styles --- */
+.login-page { display: flex; justify-content: center; align-items: center; height: 100vh; }
+.login-container { background: var(--card-bg); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px var(--shadow-color); width: 100%; max-width: 400px; text-align: center; }
+.login-header h2 { font-size: 24px; margin-bottom: 8px; }
+.login-header p { color: var(--text-secondary); margin-bottom: 30px; }
+.login-form .input-group { margin-bottom: 20px; text-align: left; }
+.login-form label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 8px; }
+.login-form input { width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 16px; }
+.login-button { width: 100%; padding: 14px; background-color: var(--primary-color); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background-color 0.3s; }
+
+/* --- Dashboard General Layout --- */
+.dashboard-container { display: flex; min-height: 100vh; }
+.sidebar { width: 260px; background-color: var(--sidebar-bg); border-right: 1px solid var(--border-color); display: flex; flex-direction: column; padding: 20px; }
+.main-content { flex: 1; padding: 24px 32px; }
+
+/* --- Sidebar --- */
+.sidebar-header { display: flex; align-items: center; gap: 12px; padding: 10px 0 30px 10px; }
+.logo-icon { font-size: 32px; color: var(--primary-color); }
+.logo-text { font-size: 22px; font-weight: 700; }
+.sidebar-nav ul li { margin-bottom: 8px; }
+.sidebar-nav ul li a { display: flex; align-items: center; padding: 12px 16px; border-radius: 8px; font-weight: 500; transition: background-color 0.2s, color 0.2s; }
+.sidebar-nav ul li a:hover { background-color: #F0F5FD; color: var(--primary-color); }
+.sidebar-nav ul li.active a { background-color: var(--primary-color); color: white; }
+.sidebar-nav i { font-size: 22px; margin-right: 16px; }
+.sidebar-footer { margin-top: auto; }
+.user-profile { display: flex; align-items: center; gap: 12px; padding-top: 15px; border-top: 1px solid var(--border-color); }
+.user-profile img { width: 40px; height: 40px; border-radius: 50%; }
+.user-name { font-weight: 600; }
+.user-email { font-size: 12px; color: var(--text-secondary); }
+
+/* --- Main Content Header --- */
+.main-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.breadcrumbs { color: var(--text-secondary); }
+.breadcrumbs .current { color: var(--text-primary); font-weight: 500; }
+.icon-button { background: none; border: none; font-size: 24px; color: var(--text-secondary); cursor: pointer; }
+.patient-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.patient-info { display: flex; align-items: center; gap: 20px; }
+.patient-info img { width: 60px; height: 60px; border-radius: 50%; }
+.patient-details h1 { font-size: 28px; font-weight: 600; }
+.patient-details p { color: var(--text-secondary); }
+
+/* --- Section Navigation Bar --- */
+.section-nav { margin-bottom: 24px; border-bottom: 1px solid var(--border-color); }
+.section-nav ul { display: flex; gap: 24px; }
+.section-nav ul li a { display: block; padding: 16px 4px; font-weight: 500; color: var(--text-secondary); border-bottom: 2px solid transparent; }
+.section-nav ul li.active-section a { color: var(--primary-color); border-bottom-color: var(--primary-color); }
+
+/* --- Content Area & Cards --- */
+.content-area { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; margin-bottom: 24px; }
+.content-column .card:last-child { margin-bottom: 0; }
+.card-header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--border-color); }
+.card-header h2 { font-size: 18px; font-weight: 600; }
+.card-body { padding: 20px; }
+
+/* Specific Card Body Styles */
+.card-body h3 { font-size: 16px; margin-bottom: 8px; }
+.card-body .meta-info { font-size: 12px; color: var(--text-secondary); }
+.card-body .main-info { font-size: 14px; font-weight: 500; margin-top: 4px; }
+.allergy-item { display: flex; justify-content: space-between; align-items: center; }
+.severity-badge { background-color: #FBECEB; color: #e74c3c; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; }
+.vitals-list { display: flex; flex-direction: column; }
+.vital-item { display: grid; grid-template-columns: auto 1fr; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border-color);}
+.vital-item:last-child { border-bottom: none; }
+.vital-info { display: flex; align-items: center; gap: 16px; font-weight: 500; }
+.vital-icon { font-size: 24px; width: 24px; text-align: center; color: var(--text-secondary); }
+.vital-reading { font-weight: 500; text-align: right; }
+.detail-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border-color); font-size: 14px; }
+.detail-item:last-child { border-bottom: none; }
+.detail-label { color: var(--text-secondary); }
+.detail-value { font-weight: 500; }
+
+/* --- Responsive Design --- */
+@media (max-width: 1200px) { .content-area { grid-template-columns: 1fr; } }
+@media (max-width: 992px) {
+    .sidebar { width: 70px; }
+    .sidebar span, .sidebar .user-info { display: none; }
+    .sidebar-header, .sidebar-nav ul li a, .sidebar-footer .user-profile { justify-content: center; }
+    .sidebar-nav i { margin-right: 0; }
+    .user-profile { border: none; }
+}
+/* --- Chat Widget --- */
+#chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background: white;
+    border: 1px solid #EAEBF0;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    z-index: 9999;
+}
+
+#chat-header {
+    background: #4A90E2;
+    color: white;
+    padding: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#chat-box {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+#chat-input {
+    display: flex;
+    border-top: 1px solid #EAEBF0;
+}
+
+#chat-input input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+#chat-input button {
+    background: #4A90E2;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+/* Scrollbar for chat */
+#chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+#chat-box::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 3px;
+}

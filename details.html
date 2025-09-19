@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCD Care - Patient Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header"><i class='bx bxs-heart-circle logo-icon'></i><span class="logo-text">NCD-Care</span></div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#"><i class='bx bxs-dashboard'></i><span>Dashboard</span></a></li>
+                    <li class="active"><a href="#"><i class='bx bxs-user-detail'></i><span>Patients</span></a></li>
+                    <li><a href="#"><i class='bx bx-sitemap'></i><span>Care Plans</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile"><img src="https://i.pravatar.cc/40?u=courtney" alt="User Avatar"><div class="user-info"><span class="user-name">Dr. Tejas Agarwal</span><span class="user-email">tejas@mail.com</span></div></div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="breadcrumbs"><span>Patients</span> / <span class="current">Aditya k</span></div>
+                <div class="header-actions"><button class="icon-button"><i class='bx bxs-bell'></i></button></div>
+            </header>
+
+            <section class="patient-header">
+                <div class="patient-info"><img src="https://i.pravatar.cc/60?u=jenny" alt="Patient Avatar"><div class="patient-details"><h1>Aditya k</h1><p>Male - 18 Years</p></div></div>
+            </section>
+            
+            <nav class="section-nav">
+                <ul>
+                    <li><a href="medical-summary.html">Medical Summary</a></li>
+                    <li class="active-section"><a href="details.html">Details</a></li>
+                </ul>
+            </nav>
+
+            <div class="content-area">
+                <section class="content-column">
+                    <div class="card"><div class="card-header"><h2>Personal Information</h2></div><div class="card-body"><div class="detail-item"><span class="detail-label">Full Name</span><span class="detail-value">Aditya k</span></div><div class="detail-item"><span class="detail-label">Date of Birth</span><span class="detail-value">21st June, 2025</span></div><div class="detail-item"><span class="detail-label">Gender</span><span class="detail-value">Male</span></div></div></div>
+                    <div class="card"><div class="card-header"><h2>Emergency Contact</h2></div><div class="card-body"><div class="detail-item"><span class="detail-label">Name</span><span class="detail-value">Swati Singh</span></div><div class="detail-item"><span class="detail-label">Phone Number</span><span class="detail-value">+91 883017896</span></div></div></div>
+                </section>
+                <section class="content-column">
+                    <div class="card"><div class="card-header"><h2>Contact Information</h2></div><div class="card-body"><div class="detail-item"><span class="detail-label">Address</span><span class="detail-value">123 New York City, 110021</span></div><div class="detail-item"><span class="detail-label">Phone Number</span><span class="detail-value">+91 91784 56789</span></div></div></div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget">
+        <div id="chat-header">Chat with Gemini</div>
+        <div id="chat-box"></div>
+        <div id="chat-input">
+            <input type="text" id="user-input" placeholder="Type a message..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>
