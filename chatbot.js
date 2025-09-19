@@ -1,4 +1,4 @@
-const GEMINI_API_KEY = "YOUR_API_KEY_HERE";
+const GEMINI_API_KEY = "AIzaSyAfFf_ORisO-DDIBZewNOPitNbQy6VXrPc";
 
 async function sendMessage() {
   const input = document.getElementById("user-input");
@@ -27,3 +27,4 @@ async function sendMessage() {
   }
   chatBox.scrollTop = chatBox.scrollHeight;
 }
+
