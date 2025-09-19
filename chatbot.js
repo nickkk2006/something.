@@ -1,4 +1,4 @@
-const chatWidgetHTML = 
+const chatWidgetHTML =`
 <div id="chat-widget">
   <div id="chat-header">Chat with Gemini</div>
   <div id="chat-box"></div>
@@ -7,7 +7,7 @@ const chatWidgetHTML =
       <button id="send-btn">Send</button>
   </div>
 </div>
-;
+`;
 
 document.body.insertAdjacentHTML('beforeend', chatWidgetHTML);
 
